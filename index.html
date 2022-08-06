@@ -24,7 +24,7 @@
     <h4>HTML5のcanvasを使用<br>
         htmlにてキャンバス用意:canvas ref="myCanvas" width="600" height="400"<br>
         vue.jsにてコンテキスト取得:var ctx = this.canvas.getContext('2d')<br>
-        同じくctxにて線の設定、色種と幅は9つとする<br>
+        同じくctxにて線の設定<br>
         削除機能と再描画を実装<br>
         ※「html」と「vue.js」の2つのファイル構成で実装する<br>
         スマホやタブレットでは描けないよ( ；∀；)
@@ -32,15 +32,18 @@
     </h4>
     <div id="app">
         色：<label><input type="radio" value="black" v-model="color">黒</label>
+        <label><input type="radio" value="#ffffff" v-model="color">白</label>
+        <label><input type="radio" value="#999999" v-model="color">灰色</label>
+        <label><input type="radio" value="#ffcc99" v-model="color">ベージュ</label>
         <label><input type="radio" value="red" v-model="color">赤</label>
         <label><input type="radio" value="blue" v-model="color">青</label>
         <label><input type="radio" value="yellow" v-model="color">黄</label>
         <label><input type="radio" value="green" v-model="color">緑</label>
         <label><input type="radio" value="pink" v-model="color">桃</label>
+        <label><input type="radio" value="#660000" v-model="color">焦茶</label>
         <label><input type="radio" value="brown" v-model="color">茶</label>
+        <label><input type="radio" value="#cc9966" v-model="color">薄茶</label>
         <label><input type="radio" value="orange" v-model="color">橙</label>
-        <label><input type="radio" value="purple" v-model="color">紫</label>
-
         <label for="width">線幅</label>
         <select v-model="width">
             <option v-for="num in [1, 2, 3, 4, 5, 6, 7, 8, 9]">{{ num }}</option>
